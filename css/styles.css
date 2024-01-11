@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitoregular.woff");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitobold.woff");
+    font-weight: bold;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #4E73DF 0%, #224ABE 100%);
+    flex-shrink: 0;
+    width: 250px;
+}
+
+.logo {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation-item.active a, .navigation-item a:hover {
+    background: rgba(0, 0, 0, 0.57);
+}
+
+.navigation-item a {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    text-decoration: none;
+}
+
+.navigation-item a span {
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    padding: 18px 20px;
+    /*padding: 19px 20px 18px;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-search {
+    display: flex;
+    position: relative;
+}
+
+.header-search-input {
+    background: #F8F9FC;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000;
+    border: 0;
+    padding: 7px 10px;
+    outline: none;
+}
+
+.header-search-input::placeholder {
+    color: #B3B3B3;
+}
+
+.header-search-button {
+    width: 33px;
+    height: 33px;
+    background: #4B70DC;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.header-info {
+    display: flex;
+    align-self: end;
+}
+
+.header-info-actions {
+    display: flex;
+    align-items: center;
+    padding-right: 3px;
+    border-right: 1px solid #838383;
+}
+
+.header-info-actions svg {
+    margin-right: 17px;
+    cursor: pointer;
+}
+
+.header-info-user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-info-user span {
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.header-info-user-image {
+    height: 34px;
+    width: 34px;
+    background-image: url("../images/user.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 20px;
+}
+
+.block {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.block-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    color: #3D63D2;
+    padding: 18px 20px 19px;
+    background: #F8F9FC;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.block-content {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #858796;
+}
+
+.commentators .block-title {
+    text-align: center;
+}
+
+.commentators .block-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 49px 0 30px;
+    flex-wrap: wrap;
+
+    /*display: grid;*/
+    /*grid-template-columns: repeat(3, 1fr);*/
+
+}
+
+.commentator {
+    margin: 0 40px;
+    text-align: center;
+}
+
+.main-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-items .block {
+    max-width: 364px;
+}
+
+.header-search-result {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px;
+    width: 203px;
+    /*width: 100%;*/
+    box-sizing: border-box;
+    top: 40px;
+}
+
+.header-search-result-item {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    border-bottom: 1px solid #EBEBEB;
+    cursor: pointer;
+}
+
+.header-search-result-item:last-child {
+    border-bottom: 0;
+}
+
+.header-search:hover .header-search-result {
+    display: block;
+}
+
+.header-search-result-item:hover {
+    background-color: rgba(0, 0, 0, 0.57);
+    color: #EBEBEB;
+}
